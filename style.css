@@ -13,7 +13,6 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
 }
 
 h1 {
@@ -41,9 +40,6 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--primary-color)
-    url("./https://traversymedia.com/downloads/cover.jpg") no-repeat center
-    center/cover;
 }
 
 .video-container video {
@@ -84,4 +80,191 @@ h1 {
 
 .btn:hover {
   transform: scale(0.98);
+}
+
+.section-type-1 {
+  background-color: #cc9c1a;
+}
+
+/* Import */
+
+#navbar {
+  width: 100%;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0.5em;
+  transition: top 1s;
+  position: fixed;
+}
+
+#navbar a {
+  color: #f2f2f2;
+  font-size: 1rem;
+  margin-left: 5rem;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+}
+
+.img-hover {
+  transition: transform 1s ease-in-out;
+  width: 100px;
+  filter: invert(1);
+}
+.img-hover:hover {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #cc9c1a;
+}
+
+#navbar a:hover {
+  color: #cc9c1a;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #cc9c1a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 1200px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 7.5em;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    height: 3em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    color: white;
+    background-color: #2a2a2a;
+  }
+  #navbar a {
+    color: #f2f2f2;
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+/* PRELOADER  */
+
+.preloader {
+  position: relative;
+  background: #fbfafc url(assets/239.svg) no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.preloader-fade {
+  opacity: 0;
 }
