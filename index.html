@@ -12,6 +12,7 @@
 
 <body>
 
+    <div class="preloader"></div>
 
     <header>
         <section id="navbar">
@@ -23,32 +24,29 @@
                 <div class='menu-button'></div>
             </label>
             <ul class="menu">
-                <li><a href="#about2" class="hover-underline-animation">About</a></li>
-                <li><a href="#about" class="hover-underline-animation">Gigs</a></li>
-                <li><a href="#" class="hover-underline-animation">Gallery</a></li>
-                <li><a href="book-now.html" class="hover-underline-animation">Contact</a></li>
+                <li><a href="#about-section" class="hover-underline-animation">About</a></li>
+                <li><a href="#calendar-section" class="hover-underline-animation">Calendar</a></li>
+                <li><a href="#gallery-section" class="hover-underline-animation">Gallery</a></li>
+                <li><a href="#contact-section" class="hover-underline-animation">Contact</a></li>
             </ul>
         </section>
     </header>
-
-    <div class="preloader"></div>
 
     <main>
         <section class="showcase">
             <div class="video-container">
                 <video src="assets/Music - 45447.mp4" autoplay muted loop></video>
             </div>
-            <div class="content">
+            <!-- <div class="content">
                 <div>
                     <h1>North Folk</h1>
                 </div>
-                <a href="" class="btn">Read more</a>
-            </div>
+                <a href="" class="btn">LISTEN HERE...</a>
+            </div> -->
         </section>
 
-
-        <section class="section-type-1">
-            <h1>Lorem, ipsum.</h1>
+        <section id="spotify-section">
+            <h1>Listen Here</h1>
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad necessitatibus sapiente cum quae nisi iusto
                 delectus architecto, omnis repellat quis accusamus perferendis et. Dolor modi voluptates impedit
@@ -58,23 +56,53 @@
                 Excepturi adipisci perspiciatis ad repudiandae non ipsum quisquam voluptatibus error amet provident,
                 nisi, ipsa exercitationem illum eos sed quo, mollitia quia iure labore ea veniam esse? Fugiat dolore
                 ipsam praesentium consequuntur tenetur accusantium deserunt.</p>
+            <div class="spotify-element">
+                <iframe style="border-radius:10px; padding-top:2rem;" title="Song1"
+                    src="https://open.spotify.com/embed/track/2R5Tuv4gvkVlmNA6wlqv4X?utm_source=generator&theme=0"
+                    width="100%" height="300" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <iframe style="border-radius:10px" title="Song2"
+                    src="https://open.spotify.com/embed/track/60wLbhcdzRXJYj7s0gloPI?utm_source=generator&theme=0"
+                    width="100%" height="300" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
         </section>
-        <section class="section-type-1">
-            <h1>Lorem, ipsum.</h1>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad necessitatibus sapiente cum quae nisi
-                iusto
-                delectus architecto, omnis repellat quis accusamus perferendis et. Dolor modi voluptates impedit
-                voluptas. Molestias minus, facere saepe reiciendis est adipisci consequuntur tempore! Placeat nihil
-                fugiat, ab blanditiis veniam voluptatum vel. Est iusto magni nesciunt, aliquam debitis reiciendis
-                ratione ex beatae esse numquam atque, corporis fuga perferendis alias architecto tempore eius
-                quisquam.
-                Excepturi adipisci perspiciatis ad repudiandae non ipsum quisquam voluptatibus error amet provident,
-                nisi, ipsa exercitationem illum eos sed quo, mollitia quia iure labore ea veniam esse? Fugiat dolore
-                ipsam praesentium consequuntur tenetur accusantium deserunt.</p>
+        <section id="calendar-section">
+            <h1>Calendar</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="calendar-element">
+                <p>16 DEC 22</p>
+                <p>Copenhagen</p>
+                <p>Raahuset, Vesterbro</p>
+                <a href="https://www.ticketmaster.dk/" target="_blank"><button class="calendar-btn">Find
+                        Tickets</button></a>
+            </div>
+            <div class="calendar-element">
+                <p>22 DEC 22</p>
+                <p>Copenhagen</p>
+                <p>Raahuset, Vesterbro</p>
+                <a href="https://www.ticketmaster.dk/" target="_blank"><button class="calendar-btn">Find
+                        Tickets</button></a>
+            </div>
+            <div class="calendar-element">
+                <p>26 DEC 22</p>
+                <p>Copenhagen</p>
+                <p>Raahuset, Vesterbro</p>
+                <a href="https://www.ticketmaster.dk/" target="_blank"><button class="calendar-btn">Find
+                        Tickets</button></a>
+            </div>
+            <div class="calendar-element">
+                <p>30 DEC 22</p>
+                <p>Copenhagen</p>
+                <p>Raahuset, Vesterbro</p>
+                <a href="https://www.ticketmaster.dk/" target="_blank"><button class="calendar-btn">Find
+                        Tickets</button></a>
+            </div>
         </section>
-        <section class="section-type-1">
-            <h1>Lorem, ipsum.</h1>
+        <section id="about-section">
+            <h1>Who Are We?</h1>
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad necessitatibus sapiente cum quae nisi
                 iusto
@@ -90,9 +118,39 @@
                 dolore
                 ipsam praesentium consequuntur tenetur accusantium deserunt.</p>
         </section>
+        <section id="gallery-section">
+            <h1>Gallery</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <div class="fetch-gallery">
+                <template>
+                    <img src="" alt="">
+                </template>
+            </div>
+        </section>
+        <section id="contact-section">
+            <h1>Get In Contact</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <form class="sign-up" action="">
+                <div class="container">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="text" placeholder="Email address" name="mail" required>
+                </div>
+                <div class="container">
+                    <input type="text" placeholder="Message" name="message" required>
+                </div>
+                <div class="container">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+
     </main>
     <footer>
-        <h1>hello</h1>
+        <h1>Footer</h1>
+        <img src="assets/soundcloud.svg" alt="">
+        <img src="assets/spotify.svg" alt="">
+        <img src="assets/facebook.svg" alt="">
+        <img src="assets/instagram.svg" alt="">
     </footer>
 </body>
 <script src="script.js"></script>
